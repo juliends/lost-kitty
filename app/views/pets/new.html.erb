@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="mb-3 mt-3">Add a new pet</h1>
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :found_address %>
+    <%= f.input :species, collection: Pet::SPECIES %>
+    <%= f.input :found_at %>
+    <%= f.submit "Save", class: 'btn btn-primary' %>
+  <% end %>
+</div>
